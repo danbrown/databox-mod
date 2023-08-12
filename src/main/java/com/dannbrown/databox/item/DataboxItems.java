@@ -2,6 +2,7 @@ package com.dannbrown.databox.item;
 
 import com.dannbrown.databox.DataboxCreativeTab;
 import com.dannbrown.databox.DataboxMod;
+import com.dannbrown.databox.item.custom.CustomItem;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +23,12 @@ public class DataboxItems {
       "adamantium_fragment",
       () -> new Item(new Item.Properties()
           .tab(DataboxCreativeTab.TAB_DATABOX)));
+
+  public static final RegistryObject<Item> CUSTOM_ITEM = ITEMS.register(
+      "custom_item",
+      () -> new CustomItem(new Item.Properties()
+          .tab(DataboxCreativeTab.TAB_DATABOX)
+          .stacksTo(1)));
 
   // Register
   public static void register(IEventBus eventBus) {

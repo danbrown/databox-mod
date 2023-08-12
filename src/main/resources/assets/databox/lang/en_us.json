@@ -3,9 +3,12 @@
 
   "item.databox.adamantium_ingot": "Adamantium Ingot",
   "item.databox.adamantium_fragment": "Adamantium Fragment",
+  "item.databox.custom_item": "Custom Item",
 
   "block.databox.adamantium_ore": "Adamantium Ore",
   "block.databox.deepslate_adamantium_ore": "Deepslate Adamantium Ore",
   "block.databox.adamantium_debris": "Adamantium Debris",
-  "block.databox.adamantium_block": "Block of Adamantium"
+  "block.databox.adamantium_block": "Block of Adamantium",
+  "block.databox.jump_block": "Jump Block",
+  "block.databox.core_block": "Core Block"
 }
