@@ -1,5 +1,6 @@
 package com.dannbrown.databox.item;
 
+import com.dannbrown.databox.DataboxCreativeTab;
 import com.dannbrown.databox.DataboxMod;
 
 import net.minecraft.world.item.Item;

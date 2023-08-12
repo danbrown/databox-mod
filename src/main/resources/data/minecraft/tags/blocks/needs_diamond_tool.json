@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "databox:adamantium_ore",
+    "databox:deepslate_adamantium_ore",
+    "databox:adamantium_block",
+    "databox:adamantium_debris"
+  ]
+}

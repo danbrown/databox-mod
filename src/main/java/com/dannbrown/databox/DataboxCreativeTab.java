@@ -1,4 +1,6 @@
-package com.dannbrown.databox.item;
+package com.dannbrown.databox;
+
+import com.dannbrown.databox.item.DataboxItems;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
