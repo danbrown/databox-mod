@@ -1,4 +1,4 @@
-package com.dannbrown.databox.item.custom;
+package com.dannbrown.databox.item;
 
 import java.util.List;
 

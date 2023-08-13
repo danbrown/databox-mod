@@ -1,10 +1,10 @@
-package com.dannbrown.databox.block;
+package com.dannbrown.databox.init;
 
 import java.util.function.Supplier;
 
-import com.dannbrown.databox.DataboxCreativeTab;
 import com.dannbrown.databox.DataboxMod;
-import com.dannbrown.databox.item.DataboxItems;
+import com.dannbrown.databox.block.CoreBlock;
+import com.dannbrown.databox.block.JumpBlock;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;

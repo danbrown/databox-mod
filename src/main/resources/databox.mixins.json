@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "com.dannbrown.databox.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.databox.refmap.json",
+  "mixins": ["ThrownTridentMixin"],
+  "client": [],
+  "minVersion": "0.8"
+}

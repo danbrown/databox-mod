@@ -1,8 +1,7 @@
-package com.dannbrown.databox.item;
+package com.dannbrown.databox.init;
 
-import com.dannbrown.databox.DataboxCreativeTab;
 import com.dannbrown.databox.DataboxMod;
-import com.dannbrown.databox.item.custom.CustomItem;
+import com.dannbrown.databox.item.CustomItem;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;

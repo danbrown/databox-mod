@@ -10,5 +10,7 @@
   "block.databox.adamantium_debris": "Adamantium Debris",
   "block.databox.adamantium_block": "Block of Adamantium",
   "block.databox.jump_block": "Jump Block",
-  "block.databox.core_block": "Core Block"
+  "block.databox.core_block": "Core Block",
+
+  "enchantment.databox.blinking_strike": "Blinking Strike"
 }

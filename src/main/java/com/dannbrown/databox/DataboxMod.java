@@ -1,7 +1,8 @@
 package com.dannbrown.databox;
 
-import com.dannbrown.databox.block.DataboxBlocks;
-import com.dannbrown.databox.item.DataboxItems;
+import com.dannbrown.databox.init.DataboxBlocks;
+import com.dannbrown.databox.init.DataboxEnchantments;
+import com.dannbrown.databox.init.DataboxItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,6 +28,7 @@ public class DataboxMod {
 
     DataboxItems.register(modEventBus);
     DataboxBlocks.register(modEventBus);
+    DataboxEnchantments.register(modEventBus);
 
     // Register the commonSetup method for modloading
     modEventBus.addListener(this::commonSetup);
