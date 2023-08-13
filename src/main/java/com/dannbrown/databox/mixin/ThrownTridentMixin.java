@@ -33,7 +33,7 @@ public abstract class ThrownTridentMixin extends AbstractArrow {
   @Accessor
   public abstract ItemStack getTridentItem();
 
-  @Inject(method = { "onHitEntity(Lnet/minecraft/world/phys/EntityHitResult;)V" }, at = {
+  @Inject(method = { "onHitEntity" }, at = {
       @At("TAIL") }, cancellable = true, require = 1)
   public void endHitEntity(EntityHitResult res, CallbackInfo ci) {
     Level world = this.level;
