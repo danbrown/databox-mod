@@ -1,6 +1,8 @@
 package com.dannbrown.databox;
 
+import com.dannbrown.databox.init.DataboxBiomes;
 import com.dannbrown.databox.init.DataboxBlocks;
+import com.dannbrown.databox.init.DataboxDimensions;
 import com.dannbrown.databox.init.DataboxEnchantments;
 import com.dannbrown.databox.init.DataboxItems;
 import com.mojang.logging.LogUtils;
@@ -29,6 +31,8 @@ public class DataboxMod {
     DataboxItems.register(modEventBus);
     DataboxBlocks.register(modEventBus);
     DataboxEnchantments.register(modEventBus);
+    DataboxDimensions.register(modEventBus);
+    DataboxBiomes.register(modEventBus);
 
     // Register the commonSetup method for modloading
     modEventBus.addListener(this::commonSetup);

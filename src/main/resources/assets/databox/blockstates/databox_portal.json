@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "databox:block/databox_portal_z"
+    },
+    "axis=x": {
+      "model": "databox:block/databox_portal_x"
+    }
+  }
+}

@@ -2,8 +2,8 @@ package com.dannbrown.databox.mixin;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -38,23 +38,31 @@ public abstract class ThrownTridentMixin extends AbstractArrow {
   public void endHitEntity(EntityHitResult res, CallbackInfo ci) {
     Level world = this.level;
     ItemStack tridentItem = this.getPickupItem();
+    Entity owner = this.getOwner();
 
+    // if the world is not client side and the trident has not hit something yet
     if (!world.isClientSide() && !this.hitSomething && res.getEntity() instanceof LivingEntity target) {
       // check trident enchantments
       if (tridentItem.getEnchantmentLevel(DataboxEnchantments.BLINKING_STRIKE.get()) > 0) {
-        hitSomething = true;
+        // check if the owner exists, its not the target, and its on the same level of
+        // the trident and the target
+        if (owner != null && owner != target && owner.getLevel() == target.getLevel() && owner.getLevel() == world) {
 
-        // teleport to the target
-        this.getOwner().teleportTo(target.getX(), target.getY(), target.getZ());
+          hitSomething = true;
 
-        // hurt the owner by half a heart
-        this.getOwner().hurt(DamageSource.thrown(this, this.getOwner()), 1.0F);
+          // teleport to the target if
+          owner.teleportTo(target.getX(), target.getY(), target.getZ());
 
-        // emit many of portal particles
-        for (int i = 0; i < 32; ++i) {
-          world.addParticle(ParticleTypes.PORTAL, this.getOwner().getX(),
-              this.getOwner().getY() + this.random.nextDouble() * 2.0D, this.getOwner().getZ(),
-              this.random.nextGaussian(), 0.0D, this.random.nextGaussian());
+          // hurt the owner by half a heart without knockback
+          owner.hurt(DamageSource.thrown(this, owner).bypassArmor().bypassMagic(), 1.0F);
+
+          // emit many of portal particles
+          for (int i = 0; i < 32; ++i) {
+            world.addParticle(ParticleTypes.PORTAL, owner.getX(),
+                owner.getY() + this.random.nextDouble() * 2.0D, owner.getZ(),
+                this.random.nextGaussian(), 0.0D, this.random.nextGaussian());
+          }
+
         }
       }
     }
@@ -67,26 +75,30 @@ public abstract class ThrownTridentMixin extends AbstractArrow {
     Level world = this.level;
     BlockPos hitPos = res.getBlockPos();
     ItemStack tridentItem = this.getPickupItem();
+    Entity owner = this.getOwner();
 
+    // if the world is not client side and the trident has not hit something yet
     if (!world.isClientSide() && !this.hitSomething) {
-
       // check trident enchantments
       if (tridentItem.getEnchantmentLevel(DataboxEnchantments.BLINKING_STRIKE.get()) > 0) {
-        hitSomething = true;
+        // check if the owner exists, its on the same level of the trident
+        if (owner != null && owner.getLevel() == world) {
 
-        // teleport to above the block
-        this.getOwner().teleportTo(hitPos.getX(), hitPos.getY() + 1, hitPos.getZ());
+          hitSomething = true;
 
-        // hurt the owner by half a heart
-        this.getOwner().hurt(DamageSource.thrown(this, this.getOwner()), 1.0F);
+          // teleport to above the block
+          owner.teleportTo(hitPos.getX(), hitPos.getY() + 1, hitPos.getZ());
 
-        // emit many of portal particles
-        for (int i = 0; i < 32; ++i) {
-          world.addParticle(ParticleTypes.PORTAL, hitPos.getX(),
-              hitPos.getY() + this.random.nextDouble() * 2.0D, hitPos.getZ(),
-              this.random.nextGaussian(), 0.0D, this.random.nextGaussian());
+          // hurt the owner by half a heart without knockback
+          owner.hurt(DamageSource.thrown(this, owner).bypassArmor().bypassMagic(), 1.0F);
+
+          // emit many of portal particles
+          for (int i = 0; i < 32; ++i) {
+            world.addParticle(ParticleTypes.PORTAL, hitPos.getX(),
+                hitPos.getY() + this.random.nextDouble() * 2.0D, hitPos.getZ(),
+                this.random.nextGaussian(), 0.0D, this.random.nextGaussian());
+          }
         }
-
       }
     }
   }

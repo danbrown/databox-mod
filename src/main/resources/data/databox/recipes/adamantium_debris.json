@@ -3,11 +3,11 @@
   "pattern": ["###", "###", "###"],
   "key": {
     "#": {
-      "item": "databox:adamantium_ingot"
+      "item": "databox:adamantium_fragment"
     }
   },
   "result": {
-    "item": "databox:adamantium_block",
+    "item": "databox:adamantium_debris",
     "count": 1
   }
 }

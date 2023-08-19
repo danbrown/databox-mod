@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "databox:adamantium_debris"
+    }
+  ],
+  "result": {
+    "item": "databox:adamantium_fragment",
+    "count": 9
+  }
+}

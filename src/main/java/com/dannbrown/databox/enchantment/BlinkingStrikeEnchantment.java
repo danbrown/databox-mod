@@ -31,8 +31,8 @@ public class BlinkingStrikeEnchantment extends Enchantment {
 
 	@Override
 	public boolean canEnchant(ItemStack stack) {
-		// allow enchantment to be applied only to tridents and if it's not enchanted
-		return stack.getItem() instanceof Item && stack.getItem() == Items.TRIDENT && !stack.isEnchanted();
+		// allow enchantment to be applied only to tridents
+		return stack.getItem() instanceof Item && stack.getItem() == Items.TRIDENT;
 	}
 
 	@Override

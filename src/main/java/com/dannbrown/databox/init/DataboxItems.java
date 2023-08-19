@@ -2,6 +2,7 @@ package com.dannbrown.databox.init;
 
 import com.dannbrown.databox.DataboxMod;
 import com.dannbrown.databox.item.CustomItem;
+import com.dannbrown.databox.item.PortalIgniter;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,6 +29,9 @@ public class DataboxItems {
       () -> new CustomItem(new Item.Properties()
           .tab(DataboxCreativeTab.TAB_DATABOX)
           .stacksTo(1)));
+
+  // Portal Igniter
+  public static final RegistryObject<Item> DATABOX = ITEMS.register("portal_igniter", () -> new PortalIgniter());
 
   // Register
   public static void register(IEventBus eventBus) {
