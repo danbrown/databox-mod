@@ -1,0 +1,8 @@
+// 1.20.1	2023-08-24T00:06:06.038408	Databox Block Tags
+01ae7163466c52da5377e378b050a6856d1f7a2f data/forge/tags/blocks/ores.json
+670c6a072977fb756337de2d7a48b558786d6713 data/forge/tags/blocks/ores/adamantium.json
+67d48c372bfee975d615a43cbbc6a055ddab44f6 data/forge/tags/blocks/storage_blocks/adamantium.json
+6f3ad852bbf10beb7d5f5191b00bfd7e59f6d786 data/forge/tags/blocks/storage_blocks/adamantium_debris.json
+2b944fe42de416faf8b23890ca2efefcd62ea9eb data/minecraft/tags/blocks/mineable/pickaxe.json
+b445ff676b326ce59c144137e2499b1f6422a7f0 data/minecraft/tags/blocks/needs_diamond_tool.json
+dfe57966fa199ae37deb40bf27e4552ff697db1b data/minecraft/tags/blocks/needs_iron_tool.json
