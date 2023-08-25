@@ -13,7 +13,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.example.examplemod.ExampleMod;
-import com.example.examplemod.LevelGenAA;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
@@ -53,7 +52,7 @@ public class DataboxRegistries {
     final var registryAccess = RegistryAccess.fromRegistryOfRegistries(BuiltInRegistries.REGISTRY);
     RegistrySetBuilder builder = new RegistrySetBuilder();
 
-    builder.add(Registries.DENSITY_FUNCTION, LevelGenAA::bootstrap);
+    builder.add(Registries.DENSITY_FUNCTION, DataboxDensityFunctions::bootstrap);
     builder.add(Registries.BIOME, DataboxBiomes::bootstrap);
     builder.add(Registries.CONFIGURED_FEATURE, (c) -> DataboxConfiguredFeatures.bootstrap(c));
     builder.add(Registries.CONFIGURED_CARVER, (c) -> DataboxConfiguredCarvers.bootstrap(c));
@@ -61,9 +60,9 @@ public class DataboxRegistries {
     // builder.add(Registries.DENSITY_FUNCTION, DataboxNoiseRouterData::bootstrap);
     // builder.add(Registries.MULTI_NOISE_BIOME_SOURCE_PARAMETER_LIST,
     // DataboxDimensions::bootstrapNoiseBiomeSource);
-    builder.add(Registries.DIMENSION_TYPE, UGDimensions::bootstrapType);
-    builder.add(Registries.LEVEL_STEM, UGDimensions::bootstrapStem);
-    builder.add(Registries.NOISE_SETTINGS, UGDimensions::bootstrapNoise);
+    builder.add(Registries.DIMENSION_TYPE, DataboxDimensions::bootstrapType);
+    builder.add(Registries.LEVEL_STEM, DataboxDimensions::bootstrapStem);
+    builder.add(Registries.NOISE_SETTINGS, DataboxDimensions::bootstrapNoise);
 
     return builder.buildPatch(registryAccess, vanillaLookupProvider);
   }

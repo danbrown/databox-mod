@@ -1,5 +1,5 @@
 {
-  "type": "examplemod:undergarden",
+  "type": "examplemod:sampledim",
   "generator": {
     "type": "minecraft:noise",
     "biome_source": {
@@ -202,6 +202,6 @@
         }
       ]
     },
-    "settings": "examplemod:undergarden"
+    "settings": "examplemod:sampledim"
   }
 }

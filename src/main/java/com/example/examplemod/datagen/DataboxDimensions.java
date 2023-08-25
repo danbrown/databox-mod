@@ -21,30 +21,30 @@ import java.util.List;
 import java.util.OptionalLong;
 
 import com.example.examplemod.ExampleMod;
-import com.example.examplemod.LevelGenAA;
 import com.example.examplemod.init.DataboxBlocks;
 
-public class UGDimensions {
+public class DataboxDimensions {
 
-	public static final ResourceKey<Level> UNDERGARDEN_LEVEL = ResourceKey.create(Registries.DIMENSION,
-			name("undergarden"));
-	public static final ResourceKey<Level> OTHERSIDE_LEVEL = ResourceKey.create(Registries.DIMENSION, name("otherside"));
+	public static String dimensionName = "sampledim";
 
-	public static final ResourceKey<NoiseGeneratorSettings> UNDERGARDEN_NOISE_GEN = ResourceKey
-			.create(Registries.NOISE_SETTINGS, name("undergarden"));
+	public static final ResourceKey<Level> SAMPLE_LEVEL = ResourceKey.create(Registries.DIMENSION,
+			name(dimensionName));
 
-	public static final ResourceKey<DimensionType> UNDERGARDEN_DIM_TYPE = ResourceKey.create(Registries.DIMENSION_TYPE,
-			name("undergarden"));
+	public static final ResourceKey<NoiseGeneratorSettings> SAMPLE_NOISE_GEN = ResourceKey
+			.create(Registries.NOISE_SETTINGS, name(dimensionName));
 
-	public static final ResourceKey<LevelStem> UNDERGARDEN_LEVEL_STEM = ResourceKey.create(Registries.LEVEL_STEM,
-			name("undergarden"));
+	public static final ResourceKey<DimensionType> SAMPLE_DIM_TYPE = ResourceKey.create(Registries.DIMENSION_TYPE,
+			name(dimensionName));
+
+	public static final ResourceKey<LevelStem> SAMPLE_LEVEL_STEM = ResourceKey.create(Registries.LEVEL_STEM,
+			name(dimensionName));
 
 	private static ResourceLocation name(String name) {
 		return new ResourceLocation(ExampleMod.MOD_ID, name);
 	}
 
 	public static void bootstrapType(BootstapContext<DimensionType> context) {
-		context.register(UNDERGARDEN_DIM_TYPE, new DimensionType(
+		context.register(SAMPLE_DIM_TYPE, new DimensionType(
 				OptionalLong.of(18000L), // fixed time
 				false, // skylight
 				true, // ceiling
@@ -57,7 +57,7 @@ public class UGDimensions {
 				128, // Height + Min Y = Max Y
 				128, // Logical Height
 				BlockTags.INFINIBURN_OVERWORLD, // infiniburn
-				name("undergarden"), // DimensionRenderInfo
+				name(dimensionName), // DimensionRenderInfo
 				0.1F, // ambient light
 				new DimensionType.MonsterSettings(true, false, UniformInt.of(0, 7), 0)));
 	}
@@ -66,18 +66,18 @@ public class UGDimensions {
 		HolderGetter<Biome> biomeRegistry = context.lookup(Registries.BIOME);
 		HolderGetter<DimensionType> dimTypes = context.lookup(Registries.DIMENSION_TYPE);
 		HolderGetter<NoiseGeneratorSettings> noiseGenSettings = context.lookup(Registries.NOISE_SETTINGS);
-		context.register(UNDERGARDEN_LEVEL_STEM, new LevelStem(dimTypes.getOrThrow(UNDERGARDEN_DIM_TYPE),
+		context.register(SAMPLE_LEVEL_STEM, new LevelStem(dimTypes.getOrThrow(SAMPLE_DIM_TYPE),
 				new NoiseBasedChunkGenerator(DataboxBiomes.buildBiomeSource(biomeRegistry),
-						noiseGenSettings.getOrThrow(UNDERGARDEN_NOISE_GEN))));
+						noiseGenSettings.getOrThrow(SAMPLE_NOISE_GEN))));
 	}
 
 	public static void bootstrapNoise(BootstapContext<NoiseGeneratorSettings> context) {
 		HolderGetter<DensityFunction> functions = context.lookup(Registries.DENSITY_FUNCTION);
 		HolderGetter<NormalNoise.NoiseParameters> noises = context.lookup(Registries.NOISE);
-		DensityFunction densityfunction = LevelGenAA.getFunction(functions, LevelGenAA.SHIFT_X);
-		DensityFunction densityfunction1 = LevelGenAA.getFunction(functions, LevelGenAA.SHIFT_Z);
+		DensityFunction densityfunction = DataboxDensityFunctions.getFunction(functions, DataboxDensityFunctions.SHIFT_X);
+		DensityFunction densityfunction1 = DataboxDensityFunctions.getFunction(functions, DataboxDensityFunctions.SHIFT_Z);
 
-		context.register(UNDERGARDEN_NOISE_GEN, new NoiseGeneratorSettings(
+		context.register(SAMPLE_NOISE_GEN, new NoiseGeneratorSettings(
 				NoiseSettings.create(0, 128, 2, 2),
 				DataboxBlocks.ADAMANTIUM_DEBRIS.get().defaultBlockState(),
 				Blocks.WATER.defaultBlockState(),
@@ -90,15 +90,15 @@ public class UGDimensions {
 								noises.getOrThrow(Noises.TEMPERATURE)), // temperature
 						DensityFunctions.shiftedNoise2d(densityfunction, densityfunction1, 0.25D,
 								noises.getOrThrow(Noises.VEGETATION)), // vegetation
-						LevelGenAA.getFunction(functions, NoiseRouterData.CONTINENTS), // continents
-						LevelGenAA.getFunction(functions, NoiseRouterData.EROSION), // erosion
+						DataboxDensityFunctions.getFunction(functions, NoiseRouterData.CONTINENTS), // continents
+						DataboxDensityFunctions.getFunction(functions, NoiseRouterData.EROSION), // erosion
 						DensityFunctions.rangeChoice(
-								LevelGenAA.getFunction(functions, LevelGenAA.Y),
+								DataboxDensityFunctions.getFunction(functions, DataboxDensityFunctions.Y),
 								0.0D,
 								32.0D,
 								DensityFunctions.constant(2.0D),
 								DensityFunctions.constant(-2.0D)), // depth
-						LevelGenAA.getFunction(functions, NoiseRouterData.RIDGES), // ridges
+						DataboxDensityFunctions.getFunction(functions, NoiseRouterData.RIDGES), // ridges
 						DensityFunctions.zero(), // initial density
 						DensityFunctions.mul(
 								DensityFunctions.constant(0.64D),

@@ -43,47 +43,6 @@ public class DataboxBlocks {
                         () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)
                                         .sound(SoundType.ANCIENT_DEBRIS)));
 
-        // // TEST
-        // public static final RegistryObject<Block> DEPTHROCK =
-        // BLOCKS.register("depthrock",
-        // () -> new
-        // Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
-
-        // public static final RegistryObject<Block> DEEPTURF_BLOCK =
-        // BLOCKS.register("deepturf_block",
-        // () -> new
-        // Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).sound(SoundType.GRASS)));
-
-        // public static final RegistryObject<Block> DEEPSOIL =
-        // BLOCKS.register("deepsoil",
-        // () -> new
-        // Block(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)));
-
-        // public static final RegistryObject<Block> SHIVERSTONE =
-        // BLOCKS.register("shiverstone",
-        // () -> new
-        // Block(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.STONE)));
-
-        // public static final RegistryObject<Block> COARSE_DEEPSOIL =
-        // BLOCKS.register("coarse_deepsoil",
-        // () -> new
-        // Block(BlockBehaviour.Properties.copy(Blocks.COARSE_DIRT).sound(SoundType.GRAVEL)));
-
-        // public static final RegistryObject<Block> SEDIMENT =
-        // BLOCKS.register("sediment",
-        // () -> new
-        // Block(BlockBehaviour.Properties.copy(Blocks.SAND).sound(SoundType.SAND)));
-
-        // public static final RegistryObject<Block> ASHEN_DEEPTURF_BLOCK =
-        // BLOCKS.register("ashen_deepturf_block",
-        // () -> new
-        // Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).sound(SoundType.GRASS)));
-
-        // public static final RegistryObject<Block> FROZEN_DEEPTURF_BLOCK =
-        // BLOCKS.register("frozen_deepturf_block",
-        // () -> new
-        // Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).sound(SoundType.GRASS)));
-
         // Jump Block
         public static final RegistryObject<Block> JUMP_BLOCK = BLOCKS.register(LibBlockNames.JUMP_BLOCK,
                         () -> new JumpBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)));

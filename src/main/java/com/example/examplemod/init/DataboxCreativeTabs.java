@@ -28,10 +28,10 @@ public class DataboxCreativeTabs {
   }
 
   // Creative mode tab for databox items
-  public static final RegistryObject<CreativeModeTab> DATABOX_TAB = TABS.register("undergarden_group",
+  public static final RegistryObject<CreativeModeTab> DATABOX_TAB = TABS.register("examplemod_group",
       () -> CreativeModeTab.builder()
           .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
-          .title(Component.translatable("itemGroup.undergarden_group"))
+          .title(Component.translatable("itemGroup.examplemod_group"))
           .icon(() -> new ItemStack(DataboxItems.ADAMANTIUM_INGOT.get()))
           .displayItems((parameters, output) -> {
 

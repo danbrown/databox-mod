@@ -1,11 +1,11 @@
-// 1.20.1	2023-08-24T01:03:20.397501	Registries
-75ed007797e8bfc464ed6497a3665b055ad4041d data/examplemod/dimension/undergarden.json
-83696f9c5db7442cdf03cd240be35ae8bbac17f6 data/examplemod/dimension_type/undergarden.json
-f9ccac54a903744079e91b0e78e7f6dea8185033 data/examplemod/worldgen/biome/ancient_sea.json
-1ceb7c099462b1c3623d7ac4108fc516a6a782a5 data/examplemod/worldgen/biome/custom_biome_1.json
-3318cf99f62cee95eb4cf39e25b522af0056927c data/examplemod/worldgen/configured_carver/undergarden_cave.json
+// 1.20.1	2023-08-24T21:16:09.636887	Registries
+17d01697c47bf01cf5cb0197cc6bb55efb0995b9 data/examplemod/dimension/sampledim.json
+2b499d700d97d804e2bcd968cb2487d207676524 data/examplemod/dimension_type/sampledim.json
+f4d1cfa2ef9646089b57d48745712af3e8e5fd87 data/examplemod/worldgen/biome/ancient_sea.json
+7ca806f39fa0adb0f021ec5d220063bb64c416f5 data/examplemod/worldgen/biome/custom_biome_1.json
+a2ad069844c3ed55bcdbdcce3e34816630514f8f data/examplemod/worldgen/configured_carver/sample_cave.json
 7ddc5bfae83ad9e4e66c0c7d3c8ba304e3af3862 data/examplemod/worldgen/configured_feature/adamantium_ore.json
-d4896078af480417100aa7e6ee37d4f3eb74d2ed data/examplemod/worldgen/noise_settings/undergarden.json
+d4896078af480417100aa7e6ee37d4f3eb74d2ed data/examplemod/worldgen/noise_settings/sampledim.json
 8539c37d6385e79830c110919fe702b588e0381c data/examplemod/worldgen/placed_feature/adamantium_ore.json
 304478bcb3a2b87ae2cf7593520ad219c69d011d data/minecraft/worldgen/density_function/end/base_3d_noise.json
 0914e7d6c7998e5c03d3b8fb056f42bea6251f74 data/minecraft/worldgen/density_function/nether/base_3d_noise.json

@@ -15,16 +15,16 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.util.valueproviders.ConstantFloat;
 
 public class DataboxConfiguredCarvers {
-  public static final ResourceKey<ConfiguredWorldCarver<?>> UNDERGARDEN_CAVE = ResourceKey.create(
+  public static final ResourceKey<ConfiguredWorldCarver<?>> SAMPLE_CAVE = ResourceKey.create(
       Registries.CONFIGURED_CARVER,
-      LibUtils.resourceLocation("undergarden_cave"));
+      LibUtils.resourceLocation("sample_cave"));
 
   public static void bootstrap(BootstapContext<ConfiguredWorldCarver<?>> context) {
     HolderGetter<Block> blocks = context.lookup(Registries.BLOCK);
 
     context.register(
-        UNDERGARDEN_CAVE,
-        DataboxCarvers.UNDERGARDEN_CAVE.get().configured(
+        SAMPLE_CAVE,
+        DataboxCarvers.SAMPLE_CAVE.get().configured(
             new CaveCarverConfiguration(
                 0.5f,
                 UniformHeight.of(VerticalAnchor.aboveBottom(5), VerticalAnchor.belowTop(1)),

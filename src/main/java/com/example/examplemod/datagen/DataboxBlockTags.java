@@ -31,13 +31,8 @@ public class DataboxBlockTags extends IntrinsicHolderTagsProvider<Block> {
 
 	@Override
 	protected void addTags(HolderLookup.Provider provider) {
-		// undergarden
-		// tag(DataboxTags.Blocks.BASE_STONE_UNDERGARDEN).add(DataboxBlocks.DEPTHROCK.get(),
-		// DataboxBlocks.SHIVERSTONE.get());
-		// tag(DataboxTags.Blocks.DEPTHROCK_ORE_REPLACEABLES).add(DataboxBlocks.DEPTHROCK.get());
-		// tag(DataboxTags.Blocks.SHIVERSTONE_ORE_REPLACEABLES).add(DataboxBlocks.SHIVERSTONE.get());
 
-		// undergarden forge
+		// mod forge
 		tag(DataboxTags.Blocks.ORES_ADAMANTIUM)
 				.add(DataboxBlocks.ADAMANTIUM_ORE.get(), DataboxBlocks.DEEPSLATE_ADAMANTIUM_ORE.get());
 

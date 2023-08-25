@@ -15,25 +15,17 @@ public class DataboxItemModels extends DataboxItemModelProvider {
 
 	@Override
 	public String getName() {
-		return "Undergarden Item Models";
+		return "Databox Item Models";
 	}
 
 	@Override
 	protected void registerModels() {
-		// block(DataboxBlocks.DEPTHROCK);
 		block(DataboxBlocks.ADAMANTIUM_BLOCK);
 		block(DataboxBlocks.ADAMANTIUM_ORE);
 		block(DataboxBlocks.DEEPSLATE_ADAMANTIUM_ORE);
 		block(DataboxBlocks.ADAMANTIUM_DEBRIS);
 		blockLamp(DataboxBlocks.CORE_BLOCK);
 		block(DataboxBlocks.JUMP_BLOCK);
-		// block(DataboxBlocks.DEEPTURF_BLOCK);
-		// block(DataboxBlocks.DEEPSOIL);
-		// block(DataboxBlocks.SHIVERSTONE);
-		// block(DataboxBlocks.ASHEN_DEEPTURF_BLOCK);
-		// block(DataboxBlocks.COARSE_DEEPSOIL);
-		// block(DataboxBlocks.FROZEN_DEEPTURF_BLOCK);
-		// block(DataboxBlocks.SEDIMENT);
 
 		// @ ITEMS
 		normalItem(DataboxItems.ADAMANTIUM_INGOT);

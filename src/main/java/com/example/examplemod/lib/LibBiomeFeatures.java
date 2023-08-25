@@ -15,7 +15,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class LibBiomeFeatures {
   public static BiomeGenerationSettings.Builder addOresAndCaves(BiomeGenerationSettings.Builder builder) {
     return builder
-        .addCarver(GenerationStep.Carving.AIR, DataboxConfiguredCarvers.UNDERGARDEN_CAVE)
+        .addCarver(GenerationStep.Carving.AIR, DataboxConfiguredCarvers.SAMPLE_CAVE)
         .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, DataboxPlacedFeatures.ADAMANTIUM_ORE);
   }
 

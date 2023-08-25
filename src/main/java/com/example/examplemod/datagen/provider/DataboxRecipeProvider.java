@@ -374,12 +374,6 @@ public abstract class DataboxRecipeProvider extends RecipeProvider {
 				.unlocks("has_" + ForgeRegistries.ITEMS.getKey(upgradeItem.get()), has(upgradeItem.get()));
 	}
 
-	// public SmithingTransformRecipeBuilder smithingForgotten(Supplier<Item> input,
-	// Supplier<Item> result) {
-	// return smithingRecipe(input, UGItems.FORGOTTEN_INGOT,
-	// UGItems.FORGOTTEN_UPGRADE_TEMPLATE, result);
-	// }
-
 	public SingleItemRecipeBuilder stonecutting(Supplier<Block> input, ItemLike result) {
 		return SingleItemRecipeBuilder.stonecutting(Ingredient.of(input.get()), RecipeCategory.BUILDING_BLOCKS, result)
 				.unlockedBy("has_" + ForgeRegistries.BLOCKS.getKey(input.get()), has(input.get()));
@@ -395,74 +389,4 @@ public abstract class DataboxRecipeProvider extends RecipeProvider {
 		return stonecutting(DataboxBlocks.ADAMANTIUM_BLOCK, result);
 	}
 
-	// public SingleItemRecipeBuilder depthrockStonecutting(ItemLike result, int
-	// resultAmount) {
-	// return stonecutting(UGBlocks.DEPTHROCK, result, resultAmount);
-	// }
-
-	// public SingleItemRecipeBuilder depthrockBricksStonecutting(ItemLike result) {
-	// return stonecutting(UGBlocks.DEPTHROCK_BRICKS, result);
-	// }
-
-	// public SingleItemRecipeBuilder depthrockBricksStonecutting(ItemLike result,
-	// int resultAmount) {
-	// return stonecutting(UGBlocks.DEPTHROCK_BRICKS, result, resultAmount);
-	// }
-
-	// public SingleItemRecipeBuilder depthrockTilesStonecutting(ItemLike result) {
-	// return stonecutting(UGBlocks.DEPTHROCK_TILES, result);
-	// }
-
-	// public SingleItemRecipeBuilder depthrockTilesStonecutting(ItemLike result,
-	// int resultAmount) {
-	// return stonecutting(UGBlocks.DEPTHROCK_TILES, result, resultAmount);
-	// }
-
-	// public SingleItemRecipeBuilder polishedDepthrockStonecutting(ItemLike result)
-	// {
-	// return stonecutting(UGBlocks.POLISHED_DEPTHROCK, result);
-	// }
-
-	// public SingleItemRecipeBuilder polishedDepthrockStonecutting(ItemLike result,
-	// int resultAmount) {
-	// return stonecutting(UGBlocks.POLISHED_DEPTHROCK, result, resultAmount);
-	// }
-
-	// public SingleItemRecipeBuilder shiverstoneStonecutting(ItemLike result) {
-	// return stonecutting(UGBlocks.SHIVERSTONE, result);
-	// }
-
-	// public SingleItemRecipeBuilder shiverstoneStonecutting(ItemLike result, int
-	// resultAmount) {
-	// return stonecutting(UGBlocks.SHIVERSTONE, result, resultAmount);
-	// }
-
-	// public SingleItemRecipeBuilder shiverstoneBricksStonecutting(ItemLike result)
-	// {
-	// return stonecutting(UGBlocks.SHIVERSTONE_BRICKS, result);
-	// }
-
-	// public SingleItemRecipeBuilder shiverstoneBricksStonecutting(ItemLike result,
-	// int resultAmount) {
-	// return stonecutting(UGBlocks.SHIVERSTONE_BRICKS, result, resultAmount);
-	// }
-
-	// public SingleItemRecipeBuilder tremblecrustStonecutting(ItemLike result) {
-	// return stonecutting(UGBlocks.TREMBLECRUST, result);
-	// }
-
-	// public SingleItemRecipeBuilder tremblecrustStonecutting(ItemLike result, int
-	// resultAmount) {
-	// return stonecutting(UGBlocks.TREMBLECRUST, result, resultAmount);
-	// }
-
-	// public SingleItemRecipeBuilder tremblecrustBricksStonecutting(ItemLike
-	// result) {
-	// return stonecutting(UGBlocks.TREMBLECRUST_BRICKS, result);
-	// }
-
-	// public SingleItemRecipeBuilder tremblecrustBricksStonecutting(ItemLike
-	// result, int resultAmount) {
-	// return stonecutting(UGBlocks.TREMBLECRUST_BRICKS, result, resultAmount);
-	// }
 }

@@ -36,7 +36,7 @@ public class DataboxTags {
   }
 
   public static class Blocks {
-    public static final TagKey<Block> BASE_STONE_UNDERGARDEN = tag("base_stone_undergarden");
+    public static final TagKey<Block> BASE_STONE_SAMPLE = tag("base_stone_sample");
     public static final TagKey<Block> DEPTHROCK_ORE_REPLACEABLES = tag("depthrock_ore_replaceables");
     public static final TagKey<Block> SHIVERSTONE_ORE_REPLACEABLES = tag("shiverstone_ore_replaceables");
     public static final TagKey<Block> TREMBLECRUST_ORE_REPLACEABLES = tag("tremblecrust_ore_replaceables");

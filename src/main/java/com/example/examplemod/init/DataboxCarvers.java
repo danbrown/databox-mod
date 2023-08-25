@@ -13,8 +13,8 @@ public class DataboxCarvers {
   public static final DeferredRegister<WorldCarver<?>> CARVERS = DeferredRegister.create(ForgeRegistries.WORLD_CARVERS,
       ExampleMod.MOD_ID);
 
-  public static final RegistryObject<WorldCarver<CaveCarverConfiguration>> UNDERGARDEN_CAVE = CARVERS.register(
-      "undergarden_cave",
+  public static final RegistryObject<WorldCarver<CaveCarverConfiguration>> SAMPLE_CAVE = CARVERS.register(
+      "sample_cave",
       () -> new CustomCaveWorldCarver(CaveCarverConfiguration.CODEC));
 
   public static void register(IEventBus eventBus) {

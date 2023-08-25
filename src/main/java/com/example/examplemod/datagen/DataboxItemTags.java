@@ -30,17 +30,17 @@ public class DataboxItemTags extends ItemTagsProvider {
 	@Override
 	protected void addTags(HolderLookup.Provider provider) {
 
-		// undergarden forge
-		// tag(DataboxTags.Items.RAW_MATERIALS_ADADMANTIUM).add(DataboxItems.ADAMANTIUM_FRAGMENT.get());
+		// modded forge
+		tag(DataboxTags.Items.RAW_MATERIALS_ADADMANTIUM).add(DataboxItems.ADAMANTIUM_FRAGMENT.get());
 
-		// tag(DataboxTags.Items.INGOTS_ADAMANTIUM).add(DataboxItems.ADAMANTIUM_INGOT.get());
+		tag(DataboxTags.Items.INGOTS_ADAMANTIUM).add(DataboxItems.ADAMANTIUM_INGOT.get());
 
-		// copy(DataboxTags.Blocks.ORES_ADAMANTIUM, DataboxTags.Items.ORES_ADAMANTIUM);
+		copy(DataboxTags.Blocks.ORES_ADAMANTIUM, DataboxTags.Items.ORES_ADAMANTIUM);
 
-		// copy(DataboxTags.Blocks.STORAGE_BLOCKS_ADAMANTIUM,
-		// DataboxTags.Items.STORAGE_BLOCKS_ADAMANTIUM);
+		copy(DataboxTags.Blocks.STORAGE_BLOCKS_ADAMANTIUM,
+				DataboxTags.Items.STORAGE_BLOCKS_ADAMANTIUM);
 
-		// copy(DataboxTags.Blocks.STORAGE_BLOCKS_ADAMANTIUM_DEBRIS,
-		// DataboxTags.Items.STORAGE_BLOCKS_ADAMANTIUM_DEBRIS);
+		copy(DataboxTags.Blocks.STORAGE_BLOCKS_ADAMANTIUM_DEBRIS,
+				DataboxTags.Items.STORAGE_BLOCKS_ADAMANTIUM_DEBRIS);
 	}
 }

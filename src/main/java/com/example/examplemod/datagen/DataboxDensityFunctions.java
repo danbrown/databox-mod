@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.example.examplemod.datagen;
 
 import java.util.stream.Stream;
 import net.minecraft.core.Holder;
@@ -16,7 +16,7 @@ import net.minecraft.world.level.levelgen.OreVeinifier;
 import net.minecraft.world.level.levelgen.synth.BlendedNoise;
 import net.minecraft.world.level.levelgen.synth.NormalNoise;
 
-public class LevelGenAA {
+public class DataboxDensityFunctions {
   public static final float GLOBAL_OFFSET = -0.50375F;
   private static final float ORE_THICKNESS = 0.08F;
   private static final double VEININESS_FREQUENCY = 1.5D;
